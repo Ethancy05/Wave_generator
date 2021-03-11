@@ -1,0 +1,4 @@
+objcopy.exe --update-section ER_IROM1="e:\STM32Cube_Program\Base_OLED\MDK-ARM\build\Base_OLED\MDK-ARM.bin" "e:\STM32Cube_Program\Base_OLED\MDK-ARM\build\Base_OLED\MDK-ARM.axf" "e:\STM32Cube_Program\Base_OLED\MDK-ARM\build\Base_OLED\MDK-ARM.elf"
+
+objcopy.exe: e:\STM32Cube_Program\Base_OLED\MDK-ARM\build\Base_OLED\MDK-ARM.elf: warning: allocated section `RW_IRAM1' not in segment
+

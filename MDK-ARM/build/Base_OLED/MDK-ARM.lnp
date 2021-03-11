@@ -1,0 +1,26 @@
+--cpu Cortex-M4.fp --library_type=microlib --scatter "e:/STM32Cube_Program/Base_OLED/MDK-ARM/build/Base_OLED/MDK-ARM.sct" --strict --summary_stderr --info summarysizes --map --xref --callgraph --symbols --info sizes --info totals --info unused --info veneers
+--list .\build\Base_OLED\MDK-ARM.map
+.\build\Base_OLED\gpio.o
+.\build\Base_OLED\main.o
+.\build\Base_OLED\myUI.o
+.\build\Base_OLED\oledspi.o
+.\build\Base_OLED\stm32f4xx_hal_msp.o
+.\build\Base_OLED\stm32f4xx_it.o
+.\build\Base_OLED\system_stm32f4xx.o
+.\build\Base_OLED\tim.o
+.\build\Base_OLED\stm32f4xx_hal.o
+.\build\Base_OLED\stm32f4xx_hal_cortex.o
+.\build\Base_OLED\stm32f4xx_hal_dma.o
+.\build\Base_OLED\stm32f4xx_hal_dma_ex.o
+.\build\Base_OLED\stm32f4xx_hal_exti.o
+.\build\Base_OLED\stm32f4xx_hal_flash.o
+.\build\Base_OLED\stm32f4xx_hal_flash_ex.o
+.\build\Base_OLED\stm32f4xx_hal_flash_ramfunc.o
+.\build\Base_OLED\stm32f4xx_hal_gpio.o
+.\build\Base_OLED\stm32f4xx_hal_pwr.o
+.\build\Base_OLED\stm32f4xx_hal_pwr_ex.o
+.\build\Base_OLED\stm32f4xx_hal_rcc.o
+.\build\Base_OLED\stm32f4xx_hal_rcc_ex.o
+.\build\Base_OLED\stm32f4xx_hal_tim.o
+.\build\Base_OLED\stm32f4xx_hal_tim_ex.o
+.\build\Base_OLED\startup_stm32f407xx.o -o .\build\Base_OLED\MDK-ARM.axf
