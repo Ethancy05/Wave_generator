@@ -36,7 +36,6 @@ base_oled\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
 base_oled\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
 base_oled\main.o: ../Core/Inc/adc.h
 base_oled\main.o: ../Core/Inc/dac.h
-base_oled\main.o: D:\keil_v5\ARM\ARMCC\Bin\..\include\math.h
 base_oled\main.o: ../Core/Inc/dma.h
 base_oled\main.o: ../Core/Inc/tim.h
 base_oled\main.o: ../Core/Inc/gpio.h
@@ -44,3 +43,5 @@ base_oled\main.o: ../Core/Inc/oledspi.h
 base_oled\main.o: D:\keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 base_oled\main.o: ../Core/Inc/bmp.h
 base_oled\main.o: ../Core/Inc/myUI.h
+base_oled\main.o: ../Core/Inc/wave.h
+base_oled\main.o: D:\keil_v5\ARM\ARMCC\Bin\..\include\math.h

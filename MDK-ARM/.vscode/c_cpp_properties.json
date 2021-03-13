@@ -31,16 +31,16 @@
         {
             "name": "Base_OLED",
             "includePath": [
-                "e:\\workspace\\STM32orTI\\Function_generator\\Core\\Inc",
-                "e:\\workspace\\STM32orTI\\Function_generator\\Drivers\\STM32F4xx_HAL_Driver\\Inc",
-                "e:\\workspace\\STM32orTI\\Function_generator\\Drivers\\STM32F4xx_HAL_Driver\\Inc\\Legacy",
-                "e:\\workspace\\STM32orTI\\Function_generator\\Drivers\\CMSIS\\Device\\ST\\STM32F4xx\\Include",
-                "e:\\workspace\\STM32orTI\\Function_generator\\Drivers\\CMSIS\\Include",
+                "e:\\workspace\\STM32orTI\\Wave_generator\\Core\\Inc",
+                "e:\\workspace\\STM32orTI\\Wave_generator\\Drivers\\STM32F4xx_HAL_Driver\\Inc",
+                "e:\\workspace\\STM32orTI\\Wave_generator\\Drivers\\STM32F4xx_HAL_Driver\\Inc\\Legacy",
+                "e:\\workspace\\STM32orTI\\Wave_generator\\Drivers\\CMSIS\\Device\\ST\\STM32F4xx\\Include",
+                "e:\\workspace\\STM32orTI\\Wave_generator\\Drivers\\CMSIS\\Include",
                 "D:\\keil_v5\\ARM\\ARMCC\\include",
                 "D:\\keil_v5\\ARM\\ARMCC\\include\\rw",
-                "e:\\workspace\\STM32orTI\\Function_generator\\MDK-ARM",
-                "e:\\workspace\\STM32orTI\\Function_generator\\Core\\Src",
-                "e:\\workspace\\STM32orTI\\Function_generator\\Drivers\\STM32F4xx_HAL_Driver\\Src"
+                "e:\\workspace\\STM32orTI\\Wave_generator\\MDK-ARM",
+                "e:\\workspace\\STM32orTI\\Wave_generator\\Core\\Src",
+                "e:\\workspace\\STM32orTI\\Wave_generator\\Drivers\\STM32F4xx_HAL_Driver\\Src"
             ],
             "defines": [
                 "USE_HAL_DRIVER",

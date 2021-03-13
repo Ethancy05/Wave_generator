@@ -2,6 +2,7 @@
 "base_oled\startup_stm32f407xx.o"
 "base_oled\oledspi.o"
 "base_oled\myui.o"
+"base_oled\wave.o"
 "base_oled\main.o"
 "base_oled\gpio.o"
 "base_oled\adc.o"

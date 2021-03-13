@@ -10,7 +10,9 @@
             "stdlib.h": "c",
             "oledspi.h": "c",
             "dac.h": "c",
-            "math.h": "c"
+            "math.h": "c",
+            "main.h": "c",
+            "stm32f4xx_hal.h": "c"
         },
         "C_Cpp.default.intelliSenseMode": "gcc-arm",
         "files.autoGuessEncoding": true,

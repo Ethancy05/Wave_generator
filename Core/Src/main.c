@@ -30,6 +30,7 @@
 #include "oledspi.h"
 #include "bmp.h"
 #include "myUI.h"
+#include "wave.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -100,12 +101,16 @@ int main(void)
   MX_ADC1_Init();
   MX_DAC_Init();
   MX_TIM6_Init();
+  MX_TIM3_Init();
   /* USER CODE BEGIN 2 */
   OLED_Init();
   HAL_TIM_Base_Start_IT(&htim5);
   HAL_TIM_PWM_Start(&htim2,TIM_CHANNEL_2);
-  HAL_DAC_Start(&hdac,DAC1_CHANNEL_1);
-  HAL_TIM_Base_Start(&htim6);
+  //HAL_TIM_Base_Start(&htim6);
+  
+   Wave_start();
+  
+  
     
   /* USER CODE END 2 */
 
@@ -116,8 +121,10 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-    plus_setting(1000);
-    Wave_start();
+   // plus_setting(10000);
+    //Wave_start();
+     // plus_setting(50);
+ 
      
   }
   /* USER CODE END 3 */

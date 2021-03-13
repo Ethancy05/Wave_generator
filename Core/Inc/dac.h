@@ -28,7 +28,7 @@ extern "C" {
 #include "main.h"
 
 /* USER CODE BEGIN Includes */
-#include "math.h"
+
 /* USER CODE END Includes */
 
 extern DAC_HandleTypeDef hdac;
@@ -40,11 +40,7 @@ extern DAC_HandleTypeDef hdac;
 void MX_DAC_Init(void);
 
 /* USER CODE BEGIN Prototypes */
-#define PI acos(-1)  //定义π
-void Sin_Data(uint32_t *D,float VPP);
-void SquareWave_Data(uint32_t * D,float VPP);
-void plus_setting(int f);
-void Wave_start(void);
+
 /* USER CODE END Prototypes */
 
 #ifdef __cplusplus

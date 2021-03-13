@@ -21,7 +21,7 @@
 #include "dac.h"
 
 /* USER CODE BEGIN 0 */
-uint32_t * Dualsine12bit;
+
 
 /* USER CODE END 0 */
 
@@ -43,7 +43,7 @@ void MX_DAC_Init(void)
   /** DAC channel OUT1 config
   */
   sConfig.DAC_Trigger = DAC_TRIGGER_T6_TRGO;
-  sConfig.DAC_OutputBuffer = DAC_OUTPUTBUFFER_DISABLE;
+  sConfig.DAC_OutputBuffer = DAC_OUTPUTBUFFER_ENABLE;
   if (HAL_DAC_ConfigChannel(&hdac, &sConfig, DAC_CHANNEL_1) != HAL_OK)
   {
     Error_Handler();
@@ -81,8 +81,8 @@ void HAL_DAC_MspInit(DAC_HandleTypeDef* dacHandle)
     hdma_dac1.Init.MemInc = DMA_MINC_ENABLE;
     hdma_dac1.Init.PeriphDataAlignment = DMA_PDATAALIGN_HALFWORD;
     hdma_dac1.Init.MemDataAlignment = DMA_MDATAALIGN_HALFWORD;
-    hdma_dac1.Init.Mode = DMA_NORMAL;
-    hdma_dac1.Init.Priority = DMA_PRIORITY_VERY_HIGH;
+    hdma_dac1.Init.Mode = DMA_CIRCULAR;
+    hdma_dac1.Init.Priority = DMA_PRIORITY_LOW;
     hdma_dac1.Init.FIFOMode = DMA_FIFOMODE_DISABLE;
     if (HAL_DMA_Init(&hdma_dac1) != HAL_OK)
     {
@@ -91,6 +91,9 @@ void HAL_DAC_MspInit(DAC_HandleTypeDef* dacHandle)
 
     __HAL_LINKDMA(dacHandle,DMA_Handle1,hdma_dac1);
 
+    /* DAC interrupt Init */
+    HAL_NVIC_SetPriority(TIM6_DAC_IRQn, 0, 0);
+    HAL_NVIC_EnableIRQ(TIM6_DAC_IRQn);
   /* USER CODE BEGIN DAC_MspInit 1 */
 
   /* USER CODE END DAC_MspInit 1 */
@@ -115,6 +118,16 @@ void HAL_DAC_MspDeInit(DAC_HandleTypeDef* dacHandle)
 
     /* DAC DMA DeInit */
     HAL_DMA_DeInit(dacHandle->DMA_Handle1);
+
+    /* DAC interrupt Deinit */
+  /* USER CODE BEGIN DAC:TIM6_DAC_IRQn disable */
+    /**
+    * Uncomment the line below to disable the "TIM6_DAC_IRQn" interrupt
+    * Be aware, disabling shared interrupt may affect other IPs
+    */
+    /* HAL_NVIC_DisableIRQ(TIM6_DAC_IRQn); */
+  /* USER CODE END DAC:TIM6_DAC_IRQn disable */
+
   /* USER CODE BEGIN DAC_MspDeInit 1 */
 
   /* USER CODE END DAC_MspDeInit 1 */
@@ -122,36 +135,6 @@ void HAL_DAC_MspDeInit(DAC_HandleTypeDef* dacHandle)
 }
 
 /* USER CODE BEGIN 1 */
-//设置正玄波峰值，输出正弦波
-void Sin_Data(uint32_t *D,float VPP)
-{
-  uint16_t i;
-  float VP = VPP / 2;
-  for(i = 0;i < 256; i++)
-  {
-	  D[i] = (uint32_t)( ( (VP*sin( ( 1.0*i/255 ) *2*PI ))+1.65 )*4095/3.3 );//PI是π
-  }
-}
-
-//设置方波峰值，输出方波
-void SquareWave_Data(uint32_t * D,float VPP)
-{
-	D[0] = (uint32_t)(VPP*4095/3.3);
-	D[1] = 0;
-
-}
-//设置频率
-void plus_setting(int f)
-{
-	TIM6->ARR = 4000000/(256*f); //算出定时器寄存器值
-}
-
-void Wave_start(void)
-{
-	//Sin_Data(Dualsine12bit,3.3);
-	//SquareWave_Data(Dualsine12bit,3.3);
-	HAL_DAC_Start_DMA(&hdac,DAC_CHANNEL_1,(uint32_t *)Dualsine12bit,256,DAC_ALIGN_12B_R);
-}
 
 /* USER CODE END 1 */
 
