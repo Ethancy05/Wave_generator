@@ -15,10 +15,10 @@ void Wave_start(void);
 
 
 
-uint8_t signal;
-uint16_t f;
-float Vm;
-uint16_t  Dualsine12bit[256];//存放波形
+extern uint8_t signal;
+extern uint16_t f;
+extern float Vm;
+extern uint16_t  Dualsine12bit[256];//存放波形
 
 
 

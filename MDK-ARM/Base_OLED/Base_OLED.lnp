@@ -11,6 +11,7 @@
 "base_oled\tim.o"
 "base_oled\stm32f4xx_it.o"
 "base_oled\stm32f4xx_hal_msp.o"
+"base_oled\keyboard.o"
 "base_oled\stm32f4xx_hal_adc.o"
 "base_oled\stm32f4xx_hal_adc_ex.o"
 "base_oled\stm32f4xx_hal_rcc.o"

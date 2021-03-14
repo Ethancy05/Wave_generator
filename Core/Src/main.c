@@ -31,6 +31,7 @@
 #include "bmp.h"
 #include "myUI.h"
 #include "wave.h"
+#include "keyboard.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -51,7 +52,7 @@
 
 /* USER CODE BEGIN PV */
 float duty;
-
+unsigned char value;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -121,10 +122,7 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-   // plus_setting(10000);
-    //Wave_start();
-     // plus_setting(50);
- 
+   value = key_scan();
      
   }
   /* USER CODE END 3 */

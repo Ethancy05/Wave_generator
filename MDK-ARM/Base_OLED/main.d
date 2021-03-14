@@ -45,3 +45,4 @@ base_oled\main.o: ../Core/Inc/bmp.h
 base_oled\main.o: ../Core/Inc/myUI.h
 base_oled\main.o: ../Core/Inc/wave.h
 base_oled\main.o: D:\keil_v5\ARM\ARMCC\Bin\..\include\math.h
+base_oled\main.o: ../Core/Inc/keyboard.h
