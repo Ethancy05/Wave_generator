@@ -38,3 +38,4 @@ base_oled\wave.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
 base_oled\wave.o: D:\keil_v5\ARM\ARMCC\Bin\..\include\math.h
 base_oled\wave.o: ../Core/Inc/tim.h
 base_oled\wave.o: ../Core/Inc/dac.h
+base_oled\wave.o: ../Core/Inc/adc.h

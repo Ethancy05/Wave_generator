@@ -22,20 +22,18 @@ Dialog DLL:      TCM.DLL V1.46.0.0
  
 <h2>Project:</h2>
 E:\workspace\STM32orTI\Wave_generator\MDK-ARM\Base_OLED.uvprojx
-Project File Date:  03/14/2021
+Project File Date:  03/16/2021
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 7 (build 960)', folder: 'D:\keil_v5\ARM\ARMCC\Bin'
 Build target 'Base_OLED'
-compiling keyboard.c...
-..\Core\Src\keyboard.c(46): warning:  #2548-D: multicharacter character literal (potential portability problem)
-              return '10';
-..\Core\Src\keyboard.c(46): warning:  #69-D: integer conversion resulted in truncation
-              return '10';
-..\Core\Src\keyboard.c: 2 warnings, 0 errors
+compiling wave.c...
+..\Core\Src\wave.c(39): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	D[0] = (uint16_t)(VPP*4095/3.3);
+..\Core\Src\wave.c: 1 warning, 0 errors
 linking...
-Program Size: Code=14524 RO-data=6820 RW-data=32 ZI-data=3232  
-"Base_OLED\Base_OLED.axf" - 0 Error(s), 2 Warning(s).
+Program Size: Code=16876 RO-data=6884 RW-data=36 ZI-data=3292  
+"Base_OLED\Base_OLED.axf" - 0 Error(s), 1 Warning(s).
 
 <h2>Software Packages used:</h2>
 

@@ -3,7 +3,7 @@
 
 void UI(void);
 
-
-
+void Draw_BianKuang(void);
+void Draw_GeZi(void);
 
 #endif

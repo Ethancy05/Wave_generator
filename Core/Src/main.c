@@ -98,18 +98,22 @@ int main(void)
   MX_GPIO_Init();
   MX_DMA_Init();
   MX_TIM2_Init();
-  MX_TIM5_Init();
   MX_ADC1_Init();
   MX_DAC_Init();
   MX_TIM6_Init();
   MX_TIM3_Init();
+  MX_TIM5_Init();
   /* USER CODE BEGIN 2 */
   OLED_Init();
   HAL_TIM_Base_Start_IT(&htim5);
   HAL_TIM_PWM_Start(&htim2,TIM_CHANNEL_2);
+  HAL_TIM_PWM_Start(&htim3,TIM_CHANNEL_1);
+ 
   //HAL_TIM_Base_Start(&htim6);
   
-   Wave_start();
+  Wave_start();
+      
+  get_value();
   
   
     
@@ -119,10 +123,13 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+       
+      
+      
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-   value = key_scan();
+   //value = key_scan();
      
   }
   /* USER CODE END 3 */
@@ -178,6 +185,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
     if (htim == (&htim5))
     {
         UI();
+        //Draw_GeZi();
     }
 
 }

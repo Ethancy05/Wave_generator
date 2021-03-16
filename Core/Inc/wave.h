@@ -12,14 +12,14 @@ void Sin_Data(uint16_t *D,float VPP);
 void SquareWave_Data(uint16_t * D,float VPP);
 void plus_setting(int f);
 void Wave_start(void);
-
+void get_value(void);
 
 
 extern uint8_t signal;
 extern uint16_t f;
 extern float Vm;
 extern uint16_t  Dualsine12bit[256];//´æ·Å²¨ÐÎ
-
+extern uint16_t vol_value[25];
 
 
 
