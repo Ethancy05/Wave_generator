@@ -5,5 +5,12 @@ void UI(void);
 
 void Draw_BianKuang(void);
 void Draw_GeZi(void);
+void Draw_Wave(void);
+typedef struct 
+{
+    int x;
+    int y;
+    int buffer[60];
+}Point;
 
 #endif

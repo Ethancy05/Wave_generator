@@ -13,7 +13,9 @@
             "math.h": "c",
             "main.h": "c",
             "stm32f4xx_hal.h": "c",
-            "keyboard.h": "c"
+            "keyboard.h": "c",
+            "wave.h": "c",
+            "myui.h": "c"
         },
         "C_Cpp.default.intelliSenseMode": "gcc-arm",
         "files.autoGuessEncoding": true,

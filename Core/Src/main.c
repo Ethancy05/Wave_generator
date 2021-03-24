@@ -101,22 +101,18 @@ int main(void)
   MX_ADC1_Init();
   MX_DAC_Init();
   MX_TIM6_Init();
-  MX_TIM3_Init();
   MX_TIM5_Init();
   /* USER CODE BEGIN 2 */
   OLED_Init();
-  HAL_TIM_Base_Start_IT(&htim5);
-  HAL_TIM_PWM_Start(&htim2,TIM_CHANNEL_2);
-  HAL_TIM_PWM_Start(&htim3,TIM_CHANNEL_1);
+  HAL_TIM_Base_Start_IT(&htim5);//定时器刷新屏幕显示
+  HAL_TIM_PWM_Start(&htim2,TIM_CHANNEL_2);//呼吸灯
+  //HAL_TIM_PWM_Start(&htim3,TIM_CHANNEL_1);//adc采集
  
-  //HAL_TIM_Base_Start(&htim6);
+  HAL_TIM_Base_Start(&htim6);
   
+  settings();
   Wave_start();
       
-  get_value();
-  
-  
-    
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -130,6 +126,9 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
    //value = key_scan();
+    
+    get_value();
+  
      
   }
   /* USER CODE END 3 */
